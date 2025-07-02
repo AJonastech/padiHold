@@ -20,7 +20,7 @@ const HeroSection = () => {
       <div className="max-w-6xl mx-auto px-4 lg:px-8 pt-[3rem]">
         <div className="grid lg:grid-cols-2 gap-6 items-center ">
           {/* Left Panel - Content */}
-          <div className="max-w-[400px] py-16 lg:py-24 relative">
+          <div className="max-w-[450px] py-16 lg:py-24 relative">
             {/* Social Icons - Positioned vertically */}
             <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-16 hidden xl:block">
               <SocialIcons />
@@ -30,7 +30,7 @@ const HeroSection = () => {
             <div className="space-y-6 ">
               {/* Main Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight font-plus-jakarta-sans ">
-                The <span className="text-primary font-">trusted</span> way to
+                The <span className="text-primary font-">Nigerian</span> way to
                 secure transactions{" "}
                 <ArrowUpRight className="inline-block w-8 h-8 lg:w-12 lg:h-12 text-primary ml-2" />
               </h1>
