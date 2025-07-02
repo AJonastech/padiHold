@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-
+import "@radix-ui/themes/styles.css";
+import { RadixThemeProvider } from "./providers";
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
@@ -32,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${plusJakartaSans.variable}  antialiased`}>
-        {children}
+        <RadixThemeProvider>{children}</RadixThemeProvider>
       </body>
     </html>
   );
