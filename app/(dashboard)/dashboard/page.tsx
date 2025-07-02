@@ -1,9 +1,22 @@
-export default function Home() {
+import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
+import { GreetingSection } from "@/components/dashboard/GreetingSection";
+import { ActiveContracts } from "@/components/dashboard/ActiveContracts";
+import { TransactionHistory } from "../../../components/dashboard/TransactionHistory";
+import { EarningsChart } from "@/components/dashboard/EarningsChart";
+import { NewContractCTA } from "../../../components/dashboard/NewContractCTA";
+
+export default function Dashboard() {
   return (
-    <div className="grid place-items-center h-screen">
-      <h1 className="text-4xl text-primary text-center font-plus-jakarta-sans">
-        Welcome to a Fresh start with PadiHold!
-      </h1>
+    <div className="flex flex-col gap-6">
+      <DashboardHeader />
+      <GreetingSection />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-16">
+        <NewContractCTA />
+        <ActiveContracts />
+        <TransactionHistory />
+        <EarningsChart />
+      </div>
     </div>
   );
 }

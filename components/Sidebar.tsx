@@ -37,7 +37,7 @@ export function Sidebar({ isCollapsed, toggleCollapse }: SidebarProps) {
       initial={{ width: isCollapsed ? 80 : 250 }}
       animate={{ width: isCollapsed ? 80 : 250 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="h-full bg-[var(--background)] relative flex flex-col border-r border-[var(--primary)]/30 justify-between"
+      className="h-full bg-[var(--background)] relative flex flex-col border-r border-[var(--primary)]/30 justify-between font-plus-jakarta-sans"
     >
       {/* Logo */}
       <div className="p-4 border-b border-[var(--primary)]/20 flex items-center justify-between">
@@ -99,8 +99,8 @@ export function Sidebar({ isCollapsed, toggleCollapse }: SidebarProps) {
       {/* User Profile */}
       <div className="p-4 border-t border-[var(--primary)]/20">
         <div className="flex items-center">
-          <div className="w-8 h-8 rounded-full bg-[#1a1a1a] flex items-center justify-center border border-[#c8f052]/20">
-            <span className="text-xs text-[#c8f052]">UN</span>
+          <div className="w-8 h-8 rounded-full bg-[#1a1a1a] flex items-center justify-center border border-[var(--primary)]/20">
+            <span className="text-xs text-[var(--primary)]">UN</span>
           </div>
           {!isCollapsed && (
             <motion.div 
@@ -109,8 +109,8 @@ export function Sidebar({ isCollapsed, toggleCollapse }: SidebarProps) {
               transition={{ duration: 0.3 }}
               className="ml-3"
             >
-              <p className="text-sm font-medium text-white">User Name</p>
-              <p className="text-xs text-gray-400">user@example.com</p>
+              <p className="text-sm font-medium text-white mb-0 leading-tight">User Name</p>
+              <p className="text-xs text-gray-400 mb-0 leading-tight">user@example.com</p>
             </motion.div>
           )}
         </div>

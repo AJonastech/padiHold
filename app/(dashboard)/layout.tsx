@@ -18,13 +18,13 @@ function DashboardLayout({ children }: { children: React.ReactNode }) {
 
         {/* Main Content */}
         <motion.main
-          className="flex-1  overflow-y-auto scrollbar-hide flex flex-col  ml-4"
+          className="flex-1 overflow-y-auto scrollbar-hide flex flex-col ml-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
           {/* Content area with matching spacing */}
-          <div className="flex-grow p-5 scrollbar-hide overflow-y-auto">
+          <div className="flex-grow p-5 pb-16 scrollbar-hide overflow-y-auto">
             <div className="h-full rounded-xl">{children}</div>
           </div>
 

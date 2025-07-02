@@ -6,6 +6,7 @@ import { RadixThemeProvider } from "./providers";
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -31,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={` ${plusJakartaSans.variable}  antialiased`}>
+    <html lang="en" className={plusJakartaSans.variable}>
+      <body className="font-plus-jakarta-sans antialiased">
         <RadixThemeProvider>{children}</RadixThemeProvider>
       </body>
     </html>

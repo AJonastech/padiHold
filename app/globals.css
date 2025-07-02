@@ -4,7 +4,7 @@
   --background: #000000;
   --foreground: #ffffff;
   --primary: #c8f052;
-  --font-sans: 'Plus Jakarta Sans', Arial, sans-serif;
+  --font-sans: var(--font-plus-jakarta-sans), Arial, sans-serif;
 }
 
 @theme inline {
@@ -17,7 +17,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-plus-jakarta-sans), Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -27,13 +27,15 @@ body {
 /* Custom text selection color */
 ::selection {
   background-color: var(--primary);
-  color: var(--background);
+  color: #000000;
+  text-shadow: none;
 }
 
 /* Firefox selection */
 ::-moz-selection {
   background-color: var(--primary);
-  color: var(--background);
+  color: #000000;
+  text-shadow: none;
 }
 
 /* Hide scrollbars but keep functionality */
@@ -83,10 +85,22 @@ h6, .h6 {
   font-weight: 600;
 }
 
-
+@layer base {
+  html {
+    font-family: var(--font-plus-jakarta-sans), system-ui, sans-serif;
+  }
+  
+  *, *::before, *::after {
+    font-family: inherit;
+  }
+  
+  input, button, textarea, select {
+    font-family: var(--font-plus-jakarta-sans), Arial, sans-serif;
+  }
+}
 
 @layer utilities {
   .font-plus-jakarta-sans {
-    font-family: var(--font-plus-jakarta-sans);
+    font-family: var(--font-plus-jakarta-sans), Arial, sans-serif;
   }
 }
