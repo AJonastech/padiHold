@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sidebar } from "./components/Sidebar";
+import { Sidebar } from "../../components/Sidebar";
 import { motion } from "framer-motion";
 
 function DashboardLayout({ children }: { children: React.ReactNode }) {
@@ -9,7 +9,7 @@ function DashboardLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="p-5 h-screen flex items-stretch">
-      <div className="flex rounded-2xl overflow-hidden bg-[var(--background)] w-full shadow-lg gap-4">
+      <div className="flex rounded-2xl  overflow-hidden  w-full shadow-lg">
         {/* Sidebar */}
         <Sidebar
           isCollapsed={isSidebarCollapsed}
@@ -18,20 +18,20 @@ function DashboardLayout({ children }: { children: React.ReactNode }) {
 
         {/* Main Content */}
         <motion.main
-          className="flex-1 overflow-y-auto flex flex-col py-4"
+          className="flex-1  overflow-y-auto scrollbar-hide flex flex-col  ml-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
           {/* Content area with matching spacing */}
-          <div className="flex-grow px-4 overflow-y-auto">
-            <div className="h-full bg-[#0a0a0a] rounded-xl">{children}</div>
+          <div className="flex-grow p-5 scrollbar-hide overflow-y-auto">
+            <div className="h-full rounded-xl">{children}</div>
           </div>
 
           {/* Footer to match sidebar bottom */}
-          <div className="p-4 border-t border-[var(--primary)]/20">
+          <div className="p-[26px] border-t  border-[var(--primary)]/20 flex items-center">
             <p className="text-xs text-[var(--foreground)]/50">
-              © 2023 PadiHold. All rights reserved.
+              © 2025 PadiHold. All rights reserved.
             </p>
           </div>
         </motion.main>
@@ -39,6 +39,5 @@ function DashboardLayout({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-
 
 export default DashboardLayout;
