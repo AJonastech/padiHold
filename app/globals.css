@@ -24,3 +24,16 @@ body {
     font-family: var(--font-plus-jakarta-sans);
   }
 }
+
+* {
+  /* remove scrolling from all items */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and Opera */
+  }
+
+}

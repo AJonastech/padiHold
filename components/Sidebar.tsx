@@ -4,15 +4,15 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { 
-  Home, 
-  Settings, 
-  Users, 
-  ChevronLeft, 
+import {
+  Home,
+  Settings,
+  Users,
+  ChevronLeft,
   ChevronRight,
   FileText,
   BarChart2,
-  HelpCircle
+  HelpCircle,
 } from "lucide-react";
 
 interface SidebarProps {
@@ -22,7 +22,7 @@ interface SidebarProps {
 
 export function Sidebar({ isCollapsed, toggleCollapse }: SidebarProps) {
   const pathname = usePathname();
-  
+
   const navItems = [
     { name: "Dashboard", href: "/dashboard", icon: Home },
     { name: "Analytics", href: "/dashboard/analytics", icon: BarChart2 },
@@ -42,7 +42,7 @@ export function Sidebar({ isCollapsed, toggleCollapse }: SidebarProps) {
       {/* Logo */}
       <div className="p-4 border-b border-[var(--primary)]/20 flex items-center justify-between">
         {!isCollapsed && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
@@ -65,21 +65,24 @@ export function Sidebar({ isCollapsed, toggleCollapse }: SidebarProps) {
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             const Icon = item.icon;
-            
+
             return (
               <li key={item.name}>
                 <Link href={item.href}>
                   <div
                     className={`flex items-center py-2.5 px-3 rounded-lg transition-all duration-200 ${
-                      isActive 
-                        ? "bg-[#1a1a1a] text-[var(--primary)]" 
+                      isActive
+                        ? "bg-[#1a1a1a] text-[var(--primary)]"
                         : "hover:bg-[#1a1a1a] text-[var(--foreground)] hover:text-[var(--primary)]"
                     }`}
                   >
-                    <Icon size={20} className={isActive ? "text-[var(--primary)]" : ""} />
-                    
+                    <Icon
+                      size={20}
+                      className={isActive ? "text-[var(--primary)]" : ""}
+                    />
+
                     {!isCollapsed && (
-                      <motion.span 
+                      <motion.span
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.3 }}
@@ -103,7 +106,7 @@ export function Sidebar({ isCollapsed, toggleCollapse }: SidebarProps) {
             <span className="text-xs text-[#c8f052]">UN</span>
           </div>
           {!isCollapsed && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
