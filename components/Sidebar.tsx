@@ -109,8 +109,8 @@ export function Sidebar({ isCollapsed, toggleCollapse }: SidebarProps) {
               transition={{ duration: 0.3 }}
               className="ml-3"
             >
-              <p className="text-sm font-medium text-white mb-0 leading-tight">User Name</p>
-              <p className="text-xs text-gray-400 mb-0 leading-tight">user@example.com</p>
+              <p className="text-sm font-medium text-white mb-0 leading-tight">Ọlọ́lá Mary</p>
+              <p className="text-xs text-gray-400 mb-0 leading-tight">Ọlọ́lámary@gmail.com</p>
             </motion.div>
           )}
         </div>
