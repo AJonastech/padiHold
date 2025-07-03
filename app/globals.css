@@ -104,3 +104,16 @@ h6, .h6 {
     font-family: var(--font-plus-jakarta-sans), Arial, sans-serif;
   }
 }
+
+* {
+  /* remove scrolling from all items */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and Opera */
+  }
+
+}
