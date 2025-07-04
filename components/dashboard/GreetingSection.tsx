@@ -7,7 +7,7 @@ export function GreetingSection() {
   const [greeting, setGreeting] = useState("");
   const [userName, setUserName] = useState("Ọlọ́lá"); // Example Nigerian name
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+  console.log(greeting, setUserName)
   // Nigerian greetings in different languages
   const greetings = [
     { language: "Pidgin", text: "How you dey?", subtext: "We dey hope say your business dey boom!" },

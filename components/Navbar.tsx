@@ -138,9 +138,9 @@ const Navbar = () => {
 
           {/* Right Section - Auth Buttons (Desktop) */}
           <div className="hidden lg:flex items-center space-x-3">
-            <button className="px-6 py-2 text-white border border-white rounded-full hover:bg-white hover:text-black transition-all duration-200 font-medium">
+            <Link href="/dashboard" className="px-6 py-2 text-white border border-white rounded-full hover:bg-white hover:text-black transition-all duration-200 font-medium">
               Sign in
-            </button>
+            </Link>
             <button className="px-6 py-2 bg-primary text-black rounded-full hover:bg-[#C4EF00] transition-all duration-200 font-bold">
               Sign up
             </button>
@@ -275,9 +275,9 @@ const Navbar = () => {
                   </Link>
                 </div>
                 <div className="pt-4 space-y-3 border-t border-gray-800 px-6">
-                  <button className="w-full px-6 py-2 text-white border border-white rounded-full hover:bg-white hover:text-black transition-all duration-200 font-medium">
+                  <Link href="/dashboard" className="block w-full px-6 py-2 text-white border border-white rounded-full hover:bg-white hover:text-black transition-all duration-200 font-medium text-center">
                     Sign in
-                  </button>
+                  </Link>
                   <button className="w-full px-6 py-2 bg-primary text-black rounded-full hover:bg-[#C4EF00] transition-all duration-200 font-bold">
                     Sign up
                   </button>
